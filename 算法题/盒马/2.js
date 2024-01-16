@@ -9,7 +9,7 @@ function solve(str) {
   if (prev.length < 3) {
     return str
   } else {
-    let remain = prev % 3
+    let remain = (prev.length) % 3
     let tmp = prev.slice(remain, len).match(/\d{3}/g).join(',')
     if (remain !== 0) {
       prev = prev.slice(0, remain) + ',' + tmp
@@ -23,5 +23,5 @@ function solve(str) {
   return prev
 }
 
-// console.log(solve('1000000'))
-console.log(solve('1000000.24'))
+// console.log(solve('10000000'))
+console.log(solve('12345678.24'))
